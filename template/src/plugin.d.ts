@@ -1,0 +1,1 @@
+/Users/lay/Desktop/Lay/fetch-ts-type/src/plugin.d.ts

@@ -1,0 +1,33 @@
+{
+  "name": "fft-base-mw",
+  "version": "1.0.0",
+  "description": "VscodeExt: Fetch Ts Type Base Middleware",
+  "main": "dist/index.js",
+  "repository": "https://github.com/lei4519/fetch-ts-type-plugin.git",
+  "author": "lei4519",
+  "license": "MIT",
+  "private": false,
+  "keywords": [
+    "fetch ts type",
+    "middleware"
+  ],
+  "scripts": {
+    "dev": "npx rollup -w --config",
+    "build": "npx rollup --config"
+  },
+  "dependencies": {
+    "axios": "^0.24.0",
+    "humps": "^2.0.1",
+    "json-to-ts": "^1.7.0",
+    "node-abort-controller": "^3.0.1"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^21.0.1",
+    "@types/humps": "^2.0.1",
+    "rollup": "^2.60.2",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.31.1",
+    "typescript": "^4.5.2"
+  }
+}
