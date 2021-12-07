@@ -11,6 +11,7 @@ export default class implements MW {
 	/** auto inject */
 	showDoc!: ShowDocFn
 	chromeCookiesSecure!: ChromeCookiesSecure.Default
+	openLoading!: (tips: string) => Function
 
 	/** 请求中的取消方法记录 */
 	fetchingControllerRecord: RequestRecordMap = {}
@@ -194,9 +195,7 @@ const response = ${JSON.stringify({ ...res, request: null }, null, 2)}
 				}
 			})
 
-		return `
-export namespace ${config.namespace} {\n\texport ${type}\n}
-`
+		return `export namespace ${config.namespace} {\n\texport ${type}\n}\n`
 	}
 
 	/** 去除不需要 diff 的字符 */

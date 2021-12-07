@@ -2,6 +2,7 @@ export default class implements MW {
 	/** auto inject */
 	showDoc!: ShowDocFn
 	chromeCookiesSecure!: ChromeCookiesSecure.Default
+	openLoading!: (tips: string) => Function
 
 	async generate(ctx: Ctx, next: NextFn) {
 		// do somthing...
