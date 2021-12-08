@@ -12,6 +12,9 @@ export default class implements MW {
 	showDoc!: ShowDocFn
 	chromeCookiesSecure!: ChromeCookiesSecure.Default
 	openLoading!: (tips: string) => Function
+	outputChannel!: OutputChannel
+
+	mwName = 'FTT-base-mw'
 
 	/** 请求中的取消方法记录 */
 	fetchingControllerRecord: RequestRecordMap = {}
@@ -137,6 +140,7 @@ export default class implements MW {
 		let res
 		try {
 			res = await promise
+			this.outputChannel.appendLine(JSON.stringify(res.data, null, 2))
 		} catch (err: any) {
 			if (err?.message === 'canceled') {
 				return null
